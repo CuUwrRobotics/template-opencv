@@ -18,14 +18,15 @@
 # HOW TO USE THIS TEMPLATE
 
 -   `cd ros-docker`
--   `make`
+-   `make` (creates the Docker container and puts code in it)
 -   Once it finishes making the docker container, detach (`^P` then `^Q` where `^` means `ctrl-`)
--   `docker exec -it piranhabot_container bash`
+-   `docker exec -it piranhabot_container bash`(This will enter the container for the Linux system)
 -   `cd ~/catkin_make`
--   `make`
--   `rosrun template-opencv template-opencv`
--   An image should show up! (Make sure MobaXterm is running.)
+-   `make` (this will build/link the actual code)
+-   `rosrun template-opencv template-opencv` (runs C++ executable that was built by running `make`)
+-   `rosrun template-opencv main.py` (runs Python code that was linked by running `make`)
+-   An image should show up for both! (Make sure MobaXterm is running.)
 
-This has the code to run a program that will open an image, load it, modify it, and go from there. I highly recommend using the existing code as the starting point for your code! It's all 'boiler plate' code, so there's no reason to rewrite it.
+This has the code to run a program that will open an image, load it, modify it, and go from there. I highly recommend using the existing code as the starting point for your code! It's all 'boiler plate' code, so there's no reason to rewrite it. I wrote both Python and C++ code that are functionally identical, either one will work for your usage!
 
 [Check out the workflow information for how to use our repositories!](https://github.com/CuUwrRobotics/workflow)
